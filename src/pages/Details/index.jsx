@@ -5,7 +5,9 @@ const Details = () => {
   return (
     <div>
       <Header />
-      Details
+      <div className="w-full h-screen flex flex-col">
+        <p className="mt-[80px]">Detail</p>
+      </div>
     </div>
   );
 };
