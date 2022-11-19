@@ -5,7 +5,9 @@ const BaDView = () => {
   return (
     <div>
       <Header />
-      3DView
+      <div className="w-full h-screen flex flex-col">
+        <p className="mt-[80px]">3D view</p>
+      </div>
     </div>
   );
 };
