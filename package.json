@@ -9,10 +9,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@esri/react-arcgis": "^5.2.0",
+    "antd": "^5.0.5",
+    "axios": "^1.2.1",
+    "esri-loader": "^3.7.0",
+    "events": "^3.3.0",
+    "formik": "^2.2.9",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
+    "react-datepicker": "^4.8.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.6.0",
-    "react-router-dom": "^6.4.3"
+    "react-icons": "^4.7.1",
+    "react-router-dom": "^6.4.3",
+    "react-toastify": "^9.1.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",

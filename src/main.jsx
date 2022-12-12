@@ -13,6 +13,7 @@ import LoginPage from "./pages/Auth/Login";
 import RegisterPage from "./pages/Auth/Register";
 import Details from "./pages/Details";
 import HomePage from "./pages/Home";
+import Images from "./pages/Images";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
   },
   {
     path: "images",
-    element: <BaDView />,
+    element: <Images />,
   },
 ]);
 

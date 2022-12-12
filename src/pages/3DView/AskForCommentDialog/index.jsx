@@ -4,39 +4,34 @@ import React, { useState } from "react";
 import landmark from "../../../assests/landmark.png";
 import * as Yup from "yup";
 import FormikControl from "../../../components/formikCustom/FormikControl.jsx";
-import AuthAPI from "../../../api/authAPI";
-import { toast } from "react-toastify";
-import { ee } from "../../3DView/AskForCommentDialog";
+
+import { EventEmitter } from "events";
 
 const validationSchema = Yup.object({
+  name: Yup.string().required("Enter your name"),
   email: Yup.string().required("Enter your email"),
-  password: Yup.string().required("Enter your password"),
 });
 
 const initialValues = {
+  name: "",
   email: "",
-  password: "",
 };
 
-const Login = ({ isShow, onOk, onCancel }) => {
+export let ee = new EventEmitter();
+
+const AskForLogin = ({ isShow, onOk, onCancel }) => {
   const handleSubmit = async (values, { resetForm }) => {
-    try {
-      const result = await AuthAPI.login(values);
-      if (result.success) {
-        localStorage.setItem("userInfo", JSON.stringify(result.userInfo || {}));
-        toast.success("Login successfully!");
-        ee.emit("login", "Open Login Dialog");
-        onOk();
-      } else {
-        toast.error(result.message);
-      }
-    } catch (error) {
-      console.log(error);
-    }
+    onOk(values);
   };
 
   const handleCloseForm = () => {
     onCancel();
+  };
+
+  const handleOpenLoginDialog = (e) => {
+    e.preventDefault();
+    onCancel();
+    ee.emit("message", "Open Login Dialog");
   };
 
   return (
@@ -58,24 +53,33 @@ const Login = ({ isShow, onOk, onCancel }) => {
             <div className="flex justify-center">
               <img src={landmark} alt="" className="w-40" />
             </div>
-            <h3 className="flex justify-center text-[23px] mt-2 font-header">
-              SIGN IN
-            </h3>
+            <button
+              className="w-full py-2 bg-blue-900"
+              type="text"
+              onClick={handleOpenLoginDialog}
+            >
+              Đăng nhập để bình luận
+            </button>
+            <div className="flex justify-center my-2">
+              <span>________________________</span>
+              <span> Hoặc </span>
+              <span>________________________</span>
+            </div>
             <div>
+              <FormikControl
+                placeholder="Enter your name"
+                control="input"
+                type="text"
+                label=""
+                name="name"
+              />
+
               <FormikControl
                 placeholder="Enter your email"
                 control="input"
                 type="text"
-                label="Email"
+                label=""
                 name="email"
-              />
-
-              <FormikControl
-                placeholder="**************"
-                control="input"
-                type="password"
-                label="Password"
-                name="password"
               />
             </div>
 
@@ -84,7 +88,7 @@ const Login = ({ isShow, onOk, onCancel }) => {
                 type="submit"
                 className=" rounded px-4 w-full bg-blue-900 py-2"
               >
-                Sign In
+                Gửi bình luận
               </button>
             </div>
           </div>
@@ -94,4 +98,4 @@ const Login = ({ isShow, onOk, onCancel }) => {
   );
 };
 
-export default Login;
+export default AskForLogin;
