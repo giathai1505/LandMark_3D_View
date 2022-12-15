@@ -54,14 +54,16 @@ const BaDView = () => {
           }}
         >
           {landMarkData.map((item) => {
-            let newArray = ConvertFaceArray(item.Body[0].Face[0].Node);
-            return (
-              <Building
-                data={newArray}
-                height={item.Body[0].Height}
-                numOfFloor={item.Body[0].NumOfFloors}
-              />
-            );
+            return item.Body.map((item) => {
+              const newArray = ConvertFaceArray(item.Face[0].Node);
+              return (
+                <Building
+                  data={newArray}
+                  height={item.Height}
+                  numOfFloor={item.NumOfFloors}
+                />
+              );
+            });
           })}
         </Scene>
         <CommentPanel
