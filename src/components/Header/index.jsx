@@ -59,9 +59,11 @@ const Header = () => {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
-            <li>
-              <Link to="/admin">Admin</Link>
-            </li>
+            {userInfo.role === 1 ? (
+              <li>
+                <Link to="/admin">Admin</Link>
+              </li>
+            ) : null}
           </ul>
         </div>
         {userInfo.username ? (

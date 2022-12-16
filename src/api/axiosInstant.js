@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const request = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://gis-final.onrender.com/api",
 });
 
 request.interceptors.response.use(

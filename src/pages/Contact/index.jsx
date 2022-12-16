@@ -4,6 +4,8 @@ import landmark from "../../assets/images/landmark.png";
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
 import FormikControl from "../../components/formikCustom/FormikControl";
+import ContactAPI from "../../api/contactAPI";
+import { toast } from "react-toastify";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Enter your name"),
@@ -18,8 +20,18 @@ const initialValues = {
 };
 
 const Contact = () => {
-  const handleSubmit = (values) => {
-    console.log(values);
+  const handleSubmit = async (values) => {
+    try {
+      const result = await ContactAPI.create({
+        name: values.name,
+        content: values.message,
+      });
+      if (result.success) {
+        toast.success(result.message);
+      } else {
+        toast.error(result.message);
+      }
+    } catch (error) {}
   };
   return (
     <div>
@@ -63,6 +75,7 @@ const Contact = () => {
                     type="text"
                     label="Message"
                     name="message"
+                    className="text-[14px]"
                   />
                 </div>
 

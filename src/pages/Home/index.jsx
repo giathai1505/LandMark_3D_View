@@ -64,10 +64,10 @@ const HomePage = () => {
                 <div className="p-6">
                   <h5 className="font-bold text-2xl my-4">View GIS 3D</h5>
                   <p className="text-gray-600 text-[18px] text-justify ">
-                    Orange lava shooting up from a volcanic vent in the
-                    Reykjanes Peninsula, Iceland, and mountaintop shadows cast
-                    on a glacier in Yukon, Canada are among the winning subjects
-                    of the second annual Natural Landscape Photography Award .
+                    An overview of Landmark 3D Geographic Information Systems to
+                    observe seven buildings including the highest skyscaper of
+                    Vietnam up to this point. 3D GIS brings real-world context
+                    to maps and data, and a visualizations that help analyzing.
                   </p>
                 </div>
 
@@ -83,10 +83,10 @@ const HomePage = () => {
                 <div className="p-6">
                   <h5 className="font-bold text-2xl my-4">Details</h5>
                   <p className="text-gray-600 text-[18px] text-justify ">
-                    Orange lava shooting up from a volcanic vent in the
-                    Reykjanes Peninsula, Iceland, and mountaintop shadows cast
-                    on a glacier in Yukon, Canada are among the winning subjects
-                    of the second annual Natural Landscape Photography Award .
+                    Discovering a variety of detail information about Landmark
+                    81 buildings including address, road, activities,
+                    viewing,... to introduce some attraction points for
+                    tourists.
                   </p>
                 </div>
 
@@ -100,12 +100,12 @@ const HomePage = () => {
 
               <div className="bg-white rounded-xl shadow-2xl ">
                 <div className="p-6">
-                  <h5 className="font-bold text-2xl my-4">Images</h5>
+                  <h5 className="font-bold text-2xl my-4">CONTACT US</h5>
                   <p className="text-gray-600 text-[18px] text-justify ">
-                    Orange lava shooting up from a volcanic vent in the
-                    Reykjanes Peninsula, Iceland, and mountaintop shadows cast
-                    on a glacier in Yukon, Canada are among the winning subjects
-                    of the second annual Natural Landscape Photography Award .
+                    Please giving any message about our website for us to
+                    improve your experience. You can also share your excitement
+                    with us. It will bings to us great motivation for doing in
+                    the future.
                   </p>
                 </div>
 
