@@ -6,6 +6,7 @@ import { Form, Formik } from "formik";
 import FormikControl from "../../components/formikCustom/FormikControl";
 import ContactAPI from "../../api/contactAPI";
 import { toast } from "react-toastify";
+import { Footer } from "../../components/Footer";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Enter your name"),
@@ -36,7 +37,7 @@ const Contact = () => {
   return (
     <div>
       <Header />
-      <div className="grid grid-cols-2 pt-[150px] mx-[400px]">
+      <div className="grid grid-cols-2 pt-[150px] h-[800px] mx-[400px]">
         <div className="col-span-1">
           <img src={landmark} alt="" />
         </div>
@@ -92,6 +93,7 @@ const Contact = () => {
           </Formik>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
