@@ -20,8 +20,7 @@ const CommentPanel = ({ isShow, hideCommentPanel }) => {
   const getAllFeedback = async () => {
     try {
       const result = await CommentAPI.getAll();
-      console.log(result);
-      setListFeedback(result.feedbacks);
+      setListFeedback(result.feedbacks.reverse());
     } catch (error) {
       console.log(error);
     }
@@ -111,7 +110,7 @@ const CommentPanel = ({ isShow, hideCommentPanel }) => {
         </button>
       </div>
       <div>
-        {listFeedback.map((item) => {
+        {listFeedback.reverse().map((item) => {
           return (
             <div className="flex gap-2 mt-4">
               <img src={user} alt="" className="w-10 self-start" />

@@ -10,7 +10,7 @@ const AdminPage = () => {
     try {
       const result = await ContactAPI.getAll();
 
-      setListContact(result.comments);
+      setListContact(result.comments.reverse());
     } catch (error) {}
   };
 
