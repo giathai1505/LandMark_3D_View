@@ -27,6 +27,7 @@ const Register = ({ isShow, onOk, onCancel }) => {
 
     try {
       const result = await AuthAPI.register(values);
+      console.log(result);
       if (result.success) {
         toast.success(result.message);
         ee.emit("message", "Open Login Dialog");
