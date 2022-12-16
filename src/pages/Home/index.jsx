@@ -100,7 +100,7 @@ const HomePage = () => {
 
               <div className="bg-white rounded-xl shadow-2xl ">
                 <div className="p-6">
-                  <h5 className="font-bold text-2xl my-4">CONTACT US</h5>
+                  <h5 className="font-bold text-2xl my-4">Contact us</h5>
                   <p className="text-gray-600 text-[18px] text-justify ">
                     Please giving any message about our website for us to
                     improve your experience. You can also share your excitement
