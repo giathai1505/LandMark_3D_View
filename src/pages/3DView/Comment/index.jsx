@@ -110,7 +110,7 @@ const CommentPanel = ({ isShow, hideCommentPanel }) => {
         </button>
       </div>
       <div>
-        {listFeedback.reverse().map((item) => {
+        {listFeedback.map((item) => {
           return (
             <div className="flex gap-2 mt-4">
               <img src={user} alt="" className="w-10 self-start" />
