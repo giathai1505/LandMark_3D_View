@@ -22,15 +22,15 @@ const Login = ({ isShow, onOk, onCancel }) => {
   const handleSubmit = async (values, { resetForm }) => {
     try {
       const result = await AuthAPI.login(values);
-      console.log(values)
-      console.log('result', result)
+      console.log(values);
+      console.log("result", result);
       if (result.success) {
         localStorage.setItem("userInfo", JSON.stringify(result.userInfo || {}));
         toast.success("Login successfully!");
         ee.emit("login", "Open Login Dialog");
         onOk();
       } else {
-        toast.error(result.message);
+        toast.error(result.response.data.message);
       }
     } catch (error) {
       console.log(error);

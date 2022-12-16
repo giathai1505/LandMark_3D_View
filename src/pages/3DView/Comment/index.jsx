@@ -92,7 +92,7 @@ const CommentPanel = ({ isShow, hideCommentPanel }) => {
         className="flex justify-between items-center mt-5"
         onClick={handleHidePanel}
       >
-        <span>2340 comments</span>
+        <span>{listFeedback.length} comments</span>
         <BsArrowRightShort className="text-[30px] cursor-pointer" />
       </div>
       <div className="flex flex-col items-end gap-2 justify-end mt-3">

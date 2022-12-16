@@ -6,6 +6,7 @@ import * as Yup from "yup";
 import FormikControl from "../../../components/formikCustom/FormikControl.jsx";
 import AuthAPI from "../../../api/authAPI";
 import { toast } from "react-toastify";
+import { ee } from "../../3DView/AskForCommentDialog";
 
 const validationSchema = Yup.object({
   email: Yup.string().required("Enter your email"),
@@ -23,16 +24,16 @@ const initialValues = {
 
 const Register = ({ isShow, onOk, onCancel }) => {
   const handleSubmit = async (values, { resetForm }) => {
-    console.log(values);
-
     try {
       const result = await AuthAPI.register(values);
-      console.log(result);
+
       if (result.success) {
         toast.success(result.message);
+        handleCloseForm();
+        resetForm();
         ee.emit("message", "Open Login Dialog");
       } else {
-        toast.error(result.message);
+        toast.error(result.response.data.message);
       }
     } catch (error) {
       console.log(error);
