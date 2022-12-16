@@ -58,11 +58,11 @@ const AskForLogin = ({ isShow, onOk, onCancel }) => {
               type="text"
               onClick={handleOpenLoginDialog}
             >
-              Đăng nhập để bình luận
+              Sign in to comment
             </button>
             <div className="flex justify-center my-2">
               <span>________________________</span>
-              <span> Hoặc </span>
+              <span> Or </span>
               <span>________________________</span>
             </div>
             <div>
@@ -88,7 +88,7 @@ const AskForLogin = ({ isShow, onOk, onCancel }) => {
                 type="submit"
                 className=" rounded px-4 w-full bg-blue-900 py-2"
               >
-                Gửi bình luận
+                Post
               </button>
             </div>
           </div>

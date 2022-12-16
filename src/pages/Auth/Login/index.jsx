@@ -22,6 +22,8 @@ const Login = ({ isShow, onOk, onCancel }) => {
   const handleSubmit = async (values, { resetForm }) => {
     try {
       const result = await AuthAPI.login(values);
+      console.log(values)
+      console.log('result', result)
       if (result.success) {
         localStorage.setItem("userInfo", JSON.stringify(result.userInfo || {}));
         toast.success("Login successfully!");

@@ -6,6 +6,7 @@ import {
   Link,
   RouterProvider,
 } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import App from "./App";
 import "./index.css";
 import BaDView from "./pages/3DView";
@@ -48,5 +49,8 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <>
+    <RouterProvider router={router} />
+    <ToastContainer />
+  </>
 );
