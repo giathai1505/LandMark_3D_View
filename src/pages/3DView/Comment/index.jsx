@@ -20,7 +20,7 @@ const CommentPanel = ({ isShow, hideCommentPanel }) => {
   const getAllFeedback = async () => {
     try {
       const result = await CommentAPI.getAll();
-      setListFeedback(result.feedbacks.reverse());
+      setListFeedback(result.feedbacks);
     } catch (error) {
       console.log(error);
     }
