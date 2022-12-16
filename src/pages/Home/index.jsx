@@ -67,7 +67,7 @@ const HomePage = () => {
                     An overview of Landmark 3D Geographic Information Systems to
                     observe seven buildings including the highest skyscaper of
                     Vietnam up to this point. 3D GIS brings real-world context
-                    to maps and data, and a visualizations that help analyzing.
+                    to maps and data.
                   </p>
                 </div>
 
@@ -111,7 +111,7 @@ const HomePage = () => {
 
                 <div className="bg-slate-100 pl-8 py-4">
                   <p className="flex items-center text-indigo-600">
-                    <Link to="/images">View</Link>{" "}
+                    <Link to="/contact">View</Link>{" "}
                     <BsArrowRight className="w-5 ml-2" />
                   </p>
                 </div>
